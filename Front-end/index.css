@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    box-sizing: content-box;
+    font-family:sans-serif;
+}
+
+html{
+    min-height: 100vh;
+    background-color: #18181a
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template: 
+    "g1 g2 g3" 50%
+    "g4 g4 g4" auto / 1fr 1fr 1fr;
+}
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1.25rem;
+}
+.grid-1{
+    grid-area: g1;
+    background-color: rgba(230, 230, 230, 0.542);
+}
+.grid-2{
+    grid-area: g2;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(63, 63, 63, 0.242);
+    color: #ececec;
+}
+
+.grid-3{
+    grid-area: g3;
+    display: grid;
+    background-color: rgba(230, 230, 230, 0.542);
+}
+.grid-3 form{
+    align-self: flex-start;
+}
+.grid-4{
+    grid-area: g4;
+    justify-content: start;
+    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(63, 63, 63, 0.242);
+    color: #ececec;
+}
+
+form{
+    font-weight: 500;
+}
+
+input, select{
+    margin: .5rem 0;
+    padding: .25rem .25rem;
+    border-radius: 5px;
+}
+
+button{
+    color: rgba(255, 255, 255, 0.66);
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.102);
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.044);
+    cursor: pointer;
+    transition: border-color .5s ;
+    /* transition: color .5s ; */
+}
+
+button:hover{
+    border-color: black;
+    color: rgb(255, 255, 255);
+}
+button:focus{
+    border-color: black;
+    color: rgb(255, 255, 255);
+}
+button:focus-visible{
+    border-color: black;
+}
+
+table{
+    background-color: rgba(49, 49, 49, 0.27);
+    padding: 1.25rem 4rem;
+}
+table thead th{
+    text-align: start;
+}
+table tr{
+    border: solid 1px white;
+}
+table th, table td{
+    padding: .25rem 1rem;
+    /* border: 1px white solid; */
+}
+
+table tr:nth-child(2n){
+    background-color: rgba(82, 81, 81, 0.104);
+}
+.pagination-links span{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+}
+
+.pagination-links span:hover{
+    background-color: black;
+    color: white;
+}

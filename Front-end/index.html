@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises PIB</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="grid-1">
+    </div>
+    <div class="grid-2">
+        <h2>Insertar datos a la tabla</h2>
+        <form id="form-post-pais">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required><br>
+            <label for="continente">Continente:</label>
+            <input type="text" name="continente" required><br>
+            <label for="poblacion">Poblacion:</label>
+            <input type="number" name="poblacion" required><br>
+            <label for="pib2019">PIB 2019:</label>
+            <input type="number" name="pib2019" required><br>
+            <label for="pib2020">PIB 2020:</label>
+            <input type="number" name="pib2020" required><br>
+        </form>
+        <button type="submit" form="form-post-pais">Enviar</button>
+
+    </div>
+    <div class="grid-3">
+
+    </div>
+    <div class="grid-4">
+        <h2>Tabla de datos</h2>
+        <table >
+            <thead id="columnas-paises-pib">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Continente</th>
+                    <th>Población</th>
+                    <th>PIB 2019</th>
+                    <th>PIB 2020</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="paises-pib">
+        
+            </tbody>
+        </table>    
+        <select name="cantfilas" id="cantfilas">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+        <p class="pagination-links"></p>    
+    </div>
+
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
